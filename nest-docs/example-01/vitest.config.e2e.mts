@@ -9,7 +9,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       enabled: true,
-      reportsDirectory: './coverage/unit',
+      reportsDirectory: './coverage/e2e',
       reporter: ['text', 'html', 'lcov'],
       exclude: ['dist/**', '**/dist/**', 'src/main.ts']
     },
@@ -18,7 +18,7 @@ export default defineConfig({
       '**/dist/**',
       'node_modules/**'
     ],
-    include: ['src/**/*.spec.ts'],
+    include: ['test/**/*-spec.ts'],
   },
   plugins: [
     swc.vite({

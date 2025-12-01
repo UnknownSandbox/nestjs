@@ -16,8 +16,14 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
+
     it('should return "Hello World!"', () => {
       expect(appService.getHello()).toBe('Hello World!');
-    });
+    })
+
+    it('should return personal hello', ()=>{
+      expect(appService.getPersonalHello('Unknown Hero')).toBe('Hello, Unknown Hero');
+    })
+
   });
 });
