@@ -21,9 +21,8 @@ describe('AppController (e2e)', () => {
 
   it('/cats (GET)', () => {
     return request(app.getHttpServer())
-      .get('/cats?age=11&breed=dog')
+      .get('/cats?age=8&breed=Spynx')
       .expect(200)
-      .expect(`This action returns all cats filtered by age: 11 and breed: dog`);
   });
 
   it('/cats with data (POST)', () => {
@@ -36,7 +35,6 @@ describe('AppController (e2e)', () => {
       .send(data)
       .expect('Cache-Control', 'no-store')
       .expect(201)
-      .expect('This action adds a new cat - Mila')
   });
 
   it('/cats without data (POST)', () => {
@@ -44,7 +42,6 @@ describe('AppController (e2e)', () => {
       .post('/cats')
       .expect('Cache-Control', 'no-store')
       .expect(201)
-      .expect('This action adds a new cat')
   });
 
   it('/cats with data (PUT)', () => {

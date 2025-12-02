@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import {beforeEach, describe, expect, it } from 'vitest';
 
-describe('AppController', () => {
+describe('AppService', () => {
   let appService: AppService;
 
   beforeEach(async () => {
